@@ -1,0 +1,9 @@
+$borderPositions:(top, left, bottom, right);
+@mixin generator-border($position){
+  border-#{$position}: 1px solid $gray-lighter;
+}
+@each $position in $borderPositions {
+	.border-#{$position}{
+		@include generator-border($position) 
+	}
+}

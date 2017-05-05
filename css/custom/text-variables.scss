@@ -1,0 +1,19 @@
+.text-light {
+	color: $gray-lighter;
+	a {
+		color: $gray-lighter;
+		&:active,&:hover {
+			color: $gray-light;
+		}
+	}
+}
+
+.text-dark {
+	color: $gray-dark;
+	a {
+		color: $gray-dark;
+		&:active,&:hover {
+			color: $gray-base;
+		}
+	}
+}

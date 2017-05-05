@@ -1,0 +1,100 @@
+.title-bar {
+	background-color: $brand-primary;
+	color: white;
+	height: 24px;
+	padding: 5px;
+	position: fixed;
+	width: 75%;
+	z-index: 1000;
+	h1,h2,h3,h4,h5,h6 {
+		margin: 0;
+	}
+}
+
+.menu-bar {
+	background-color: $gray-lighter;
+	// height: calc( 100vh - 24px );
+	height: 100vh;
+	position: fixed;
+	overflow: scroll;
+	left: 0;
+	padding: 0 15px;
+	width: 19%;
+	.nav-stacked {
+		li {
+			border-bottom: rgba(0, 0, 0, 0.2) solid 1px;
+		}
+	}
+}
+
+.agenda-bar {
+	background-color: $gray-lighter;
+	height: 100vh;
+	position: fixed;
+	overflow: scroll;
+	right: 0;
+	.dl-horizontal {
+		dt {
+			font-size: $font-size-h4;
+			font-weight: $headings-font-weight;
+			margin-top: -5px;
+		}
+		dd {
+			font-size: $font-size-h6;
+			font-weight: $headings-font-weight;
+			margin-top: 10px;
+		}
+		h1,h2,h3,h4,h5,h6 {
+			margin: 0;
+		}
+	}
+	.agenda-selected {
+		background-color: $brand-primary;
+		color: white;
+		margin-top: -1px;
+		margin-bottom: 0px;
+		hr {
+			border-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+	.agenda-submenu {
+		font-size: $font-size-h4;
+	}
+}
+
+.title-bar-secondary {
+	background-color: $gray-light;
+	height: 24px;
+	padding: 5px;
+	h1,h2,h3,h4,h5,h6 {
+		margin: 0;
+	}
+}
+
+.title-bar-dark {
+	background-color: $gray;
+	color: white;
+	padding: 5px;
+	p {
+		margin: 0;
+	}
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

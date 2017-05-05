@@ -1,0 +1,33 @@
+$spacing-margin: 8;
+$i: 1;
+$sizes: (xxs, xs, s, m, l, xl);
+$positions:(top, left, bottom, right);
+
+@mixin generator-margin($margin, $value){
+  margin-#{$margin}: #{$value}px;
+}
+
+@mixin generator-padding($margin, $value){
+  padding-#{$margin}: #{$value}px;
+}
+
+@each $size in $sizes {
+	.margin-#{$size} {
+		margin: #{$spacing-margin * $i}px;
+	}
+	.padding-#{$size} {
+		padding: #{$spacing-margin * $i}px;
+	}
+	@each $margin in $positions {
+		.margin-#{$size}-#{$margin}{
+			@include generator-margin($margin, $spacing-margin * $i) 
+		}
+		.padding-#{$size}-#{$margin}{
+			@include generator-padding($margin, $spacing-margin * $i) 
+		}
+	}
+	$i: $i + 1;
+}
+
+
+
